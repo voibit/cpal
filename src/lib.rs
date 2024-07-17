@@ -449,7 +449,8 @@ impl StreamInstant {
             .and_then(Self::from_nanos_i128)
     }
 
-    fn as_nanos(&self) -> i128 {
+    /// Returns the amount of time in nanoseconds to this instant
+    pub fn as_nanos(&self) -> i128 {
         (self.secs as i128 * 1_000_000_000) + self.nanos as i128
     }
 
